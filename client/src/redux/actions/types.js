@@ -1,0 +1,13 @@
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const USER_LOADING_SUCCESS = "USER_LOADING_SUCCESS";
+export const USER_LOADING_ERROR = "USER_LOADING_ERROR";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+export const LOGOUT = "LOGOUT";
+export const GET_REFRESH_TOKEN = "GET_REFRESH_TOKEN";
+export const SET_LOADER = "SET_LOADER";
+export const REMOVE_LOADER = "REMOVE_LOADER";

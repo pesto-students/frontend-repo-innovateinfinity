@@ -1,0 +1,25 @@
+{
+  "name": "IDrive-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=16.0.0 <17.0.0",
+    "npm": ">=8.0.0 <9.0.0"
+  }
+}
