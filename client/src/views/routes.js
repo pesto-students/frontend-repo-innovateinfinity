@@ -6,7 +6,7 @@ import {
   AddStudent,
   EditStudent,
   ViewStudent,
-  EditAttendance,
+  AddEditAttendance,
 
   // driver imports
   Drivers,
@@ -20,12 +20,7 @@ import {
   AddOrganization,
   EditOrganization,
   ViewExpenses,
-
-  // expenses imports
-  Expenses,
-  AddExpense,
-  EditExpense,
-
+  
   // admins imports
   Admins,
   AddAdmin,
@@ -127,10 +122,10 @@ const routes = [
       ),
   },
   {
-    path: "/students/attendance/edit/:id",
+    path: "/students/attendance/AddEdit",
     renderer: (params = {}) =>
       params.isAuthenticated === true ? (
-        <EditAttendance {...params} />
+        <AddEditAttendance {...params} />
       ) : (
         <Navigate to='/login' />
       ),
@@ -221,19 +216,6 @@ const routes = [
       ),
   },
 
-  // expenses routes
-  // {
-  //   path: "/expenses",
-  //   renderer: (params = {}) => (params.isAuthenticated === true ? <Expenses {...params} /> : <Navigate to='/login' />),
-  // },
-  // {
-  //   path: "/expenses/add",
-  //   renderer: (params = {}) => (params.isAuthenticated === true ? <AddExpense {...params} /> : <Navigate to='/login' />),
-  // },
-  // {
-  //   path: "/expenses/edit/:id",
-  //   renderer: (params = {}) => (params.isAuthenticated === true ? <EditExpense {...params} /> : <Navigate to='/login' />),
-  // },
   {
     path: "/*",
     renderer: (params = {}) => <NotFound {...params} />,

@@ -118,12 +118,10 @@ const Pricing = () => {
               </Box>
               <Grid container spacing={1}>
                 {[
-                  "Track Student Location",
                   "Track Student Attendance",
                   "Manage Drivers",
                   "Track Expenses",
-                  // "Completion Certifcate",
-                  // "Driving Videos",
+                  "Driving Videos",
                 ].map((item, i) => (
                   <Grid item xs={12} sm={6} key={i}>
                     <Box
@@ -214,12 +212,10 @@ const Pricing = () => {
               </Box>
               <Grid container spacing={1}>
                 {[
-                  "Track Student Location",
                   "Track Student Attendance",
                   "Manage Drivers",
                   "Track Expenses",
-                  // "Completion Certifcate",
-                  // "Driving Videos",
+                  "Driving Videos",
                 ].map((item, i) => (
                   <Grid item xs={12} sm={6} key={i}>
                     <Box

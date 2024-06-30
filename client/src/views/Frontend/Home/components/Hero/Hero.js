@@ -67,17 +67,6 @@ const Hero = () => {
             >
               Start now
             </Button>
-            {/* <Box
-              component={Button}
-              variant='outlined'
-              color='primary'
-              size='large'
-              marginTop={{ xs: 2, sm: 0 }}
-              marginLeft={{ sm: 2 }}
-              fullWidth={isMd ? false : true}
-            >
-              Learn more
-            </Box> */}
           </Box>
         </Box>
       </Grid>

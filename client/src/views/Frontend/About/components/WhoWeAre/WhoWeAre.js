@@ -55,7 +55,7 @@ const WhoWeAre = () => {
               user-focused design. We start by understanding the unique
               challenges faced by driving schools, then move to develop and
               refine our software based on real-world feedback. This approach
-              ensures that Drivolo is always evolving — designed for driving
+              ensures that IDrive is always evolving — designed for driving
               schools, by the people who know them best. Our deployment includes
               comprehensive training, followed by ongoing support and regular
               updates, ensuring that each client gets the most out of their
