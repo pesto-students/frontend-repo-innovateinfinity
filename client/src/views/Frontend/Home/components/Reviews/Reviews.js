@@ -9,12 +9,6 @@ import CardContent from "@mui/material/CardContent";
 
 const mock = [
   {
-    title: "Track Student Location",
-    subtitle:
-      "Keep your entire team in sync with development and easily manage tasks, goals, and deadlines. Easily manage and edit any Adwords campaign inline to improve ROI with constant review.",
-    icon: '/images/location.png',
-  },
-  {
     title: "Manage Attendance",
     subtitle:
       "A very simple and modern template with a very harmonious color scheme. Also the additional plugins like the statistics are great and fit perfectly into the overall picture.",
@@ -42,7 +36,7 @@ const Reviews = () => {
 
   return (
     <Box>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} justifyContent="center">
         {mock.map((item, i) => (
           <Grid item xs={12} md={3} key={i}>
             <Box

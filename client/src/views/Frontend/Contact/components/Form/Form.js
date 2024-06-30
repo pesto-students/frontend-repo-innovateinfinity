@@ -65,11 +65,6 @@ const Contact = () => {
         >
           Contact us
         </Typography>
-        {/* <Typography color="text.secondary" align={'center'}>
-          Rather than worrying about switching offices every couple years, you
-          can instead stay in the same location and grow-up from your shared
-          coworking space to an office that takes up an entire floor.
-        </Typography> */}
       </Box>
       <Box>
         <form onSubmit={formik.handleSubmit}>

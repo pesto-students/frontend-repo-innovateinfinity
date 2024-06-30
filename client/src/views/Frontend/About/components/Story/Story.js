@@ -21,9 +21,9 @@ const Story = () => {
               Our story
             </Typography>
             <Typography component={'p'}>
-            Driven by a passion for innovation and efficiency, Drivolo was founded to transform the way driving schools operate. Our journey began with a simple observation: managing a driving school was fraught with outdated practices that consumed time and effort.
+            Driven by a passion for innovation and efficiency, Idrive was founded to transform the way driving schools operate. Our journey began with a simple observation: managing a driving school was fraught with outdated practices that consumed time and effort.
             <br/>
-             Motivated to change this, we created Drivolo, a pioneering digital platform designed to streamline every aspect of driving school management, from attendance to student enrollment."
+             Motivated to change this, we created Idrive, a pioneering digital platform designed to streamline every aspect of driving school management, from attendance to student enrollment."
             </Typography>
           </Box>
         </Grid>

@@ -21,6 +21,7 @@ import {
   getAttendanceByStudentId,
   deleteAttendance,
 } from "../../../redux/actions/apiActions";
+import { PROFILES } from "../../../utils/constants";
 
 const TableComponent = ({ columns, data, title }) => {
   const theme = useTheme();
@@ -55,6 +56,7 @@ const ViewStudent = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const role = useSelector((state) => state.authReducer.role);
+  const profile = useSelector((state) => state.authReducer.profile);
   const [studentDetails, setStudentDetails] = useState({});
   const [attendanceList, setAttendanceList] = useState([]);
   const [totalKmDriven, setTotalKmDriven] = useState();
@@ -97,7 +99,6 @@ const ViewStudent = () => {
   const columns = [
     { title: "Sr no.", field: "index", filtering: false },
     { title: "KM Driven", field: "kmDriven", filtering: false },
-    { title: "Driver", field: "driver", filtering: false },
     { title: "Date", field: "date", filtering: false },
     {
       title: "Actions",
@@ -108,11 +109,14 @@ const ViewStudent = () => {
           <Tooltip title='Edit'>
             <EditIcon
               onClick={() =>
-                navigate(`/students/attendance/edit/${rowData._id}`, {
+                navigate(`/students/attendance/AddEdit`, {
                   state: {
                     studentName: studentDetails?.name,
                     date: format(new Date(rowData?.createdAt), "MMM dd, yyyy"),
                     kmDriven: rowData.kmDriven,
+                    studentId : studentDetails._id,
+                    attendanceId : rowData._id,
+                    status : rowData.status
                   },
                 })
               }
@@ -135,6 +139,7 @@ const ViewStudent = () => {
           const studentRes = await getStudentById(role, params.id);
           const attendanceRes = await getAttendanceByStudentId(role, query);
           setStudentDetails(studentRes.data.data[0]);
+          console.log("studentRes", studentRes.data.data[0]);
           const data = attendanceRes.data.data.map((d, i) => ({
             index: i + 1,
             ...d,
@@ -162,14 +167,6 @@ const ViewStudent = () => {
       studentFunc();
     }
   }, [params.id]);
-
-  // const capitalizeString = (values) => {
-  //   const name = values.toLowerCase().split(" ");
-  //   const capitalizeNameArray = name.map(
-  //     (n) => n.charAt(0).toUpperCase() + n.substr(1)
-  //   );
-  //   return capitalizeNameArray.join(" ");
-  // };
 
   return (
     <Box>
@@ -204,6 +201,25 @@ const ViewStudent = () => {
           <Typography variant={"subtitle1"} fontWeight={700}>
             Student Details
           </Typography>
+
+          {profile === PROFILES.DRIVER && (
+            <Button
+              variant='contained'
+              color='primary'
+              component='button'
+              size='large'
+              onClick={() =>
+                navigate(`/students/attendance/AddEdit`, {
+                  state: {
+                    studentName: studentDetails?.name,
+                    studentId : studentDetails._id,
+                  },
+                })
+              }
+            >
+              Mark Attendance
+            </Button>
+          )}
         </Box>
 
         <Box p={4}>

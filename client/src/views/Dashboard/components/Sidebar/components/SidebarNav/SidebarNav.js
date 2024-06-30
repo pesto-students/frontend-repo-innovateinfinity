@@ -160,8 +160,6 @@ const OrganizationMenu = [
 ]
 
 const SidebarNav = () => {
-
-  // const isAuthenticated = useSelector(state => state.authReducer.isAuthenticated);
   const profile = useSelector(state => state.authReducer.profile);
   const navigate = useNavigate();
 
@@ -200,7 +198,7 @@ const SidebarNav = () => {
           </Box>
         </Box>
       ))}
-      {profile === PROFILES.ORGANIZATION && OrganizationMenu.map((item, i) => (
+      {(profile === PROFILES.ORGANIZATION || profile === PROFILES.ADMIN ) && OrganizationMenu.map((item, i) => (
         <Box key={i} marginBottom={3}>
           <Typography
             variant="caption"

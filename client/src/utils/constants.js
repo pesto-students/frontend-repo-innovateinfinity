@@ -37,6 +37,16 @@ export const STUDENT_STATUS = {
   COMPLETED: "COMPLETED",
 };
 
+export const ATTENDANCE_STATUS = {
+  STARTED: "STARTED",
+  COMPLETED: "COMPLETED",
+};
+
+export const ATTENDANCE_STATUS_PAIR = [
+  { label: "Started", value: "Started" },
+  { label: "Completed", value: "Completed" },
+];
+
 export const PROFILES = {
   ADMIN: "ADMIN",
   ORGANIZATION: "ORGANIZATION",
